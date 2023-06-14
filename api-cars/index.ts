@@ -28,11 +28,11 @@ app.get("/log", validateInputText, (req: Request, res: Response, next: NextFunct
     }
 })
 
-app.get("/log-file", (req: Request, res: Response, next: NextFunction) => {
+app.get("/log-file/:noc", (req: Request, res: Response, next: NextFunction) => {
     try {
         // res.download("log.txt")
         fs.readFile("log.txt", 'utf8', (err, data) => {
-            console.log(data)
+            console.log(data.length)
             if (err) throw new Error("File issue")
             return res.json({ d: data })
         })
