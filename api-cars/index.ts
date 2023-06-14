@@ -41,7 +41,7 @@ app.get("/cars", (req: Request, res: Response, next: NextFunction) => {
 
 })
 
-function validateTextInput(req: Request, res: Response, next: NextFunction) {
+function b(req: Request, res: Response, next: NextFunction) {
     const { text } = req.query
     if (typeof text === 'string' && text.length > 20) {
         next(new Error("Text length is over max characters: 20")) // go to 72
@@ -49,7 +49,7 @@ function validateTextInput(req: Request, res: Response, next: NextFunction) {
         next()
     }
 }
-app.get("/log", validateTextInput, (req: Request, res: Response, next: NextFunction) => {
+app.get("/log", b, (req: Request, res: Response, next: NextFunction) => {
     try {
         const { text } = req.query;
         if (!text) throw new Error("Missing text value")
