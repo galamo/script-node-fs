@@ -29,7 +29,6 @@ app.use((err, req, res, next) => {
     res.status(500).send("Something went wrong")
 })
 
-
 app.listen(5500, () => {
     console.log("Server is listening")
 })

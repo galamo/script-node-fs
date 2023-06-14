@@ -13,3 +13,4 @@
 3. create middleware `app.use` that will validate `text` to max 20 characters  ( if the text contains more than 20 characters return response to the client with error)
 4. GET /log-file will return the log.txt content
 5. create a draw.io of your API with the relations 
+
