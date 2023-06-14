@@ -3,7 +3,6 @@ import express, { Request, Response, NextFunction } from "express"
 import fs from "fs"
 import { carsRouter } from "./routes/cars";
 const app = express();
-console.log("Server is ok")
 
 app.use("/cars", carsRouter)
 
