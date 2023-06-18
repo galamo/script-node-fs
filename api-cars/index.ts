@@ -4,6 +4,7 @@ import fs from "fs"
 import { carsRouter } from "./routes/cars";
 import { usersRouter } from "./routes/users"
 const app = express();
+app.use(express.json())
 app.use("/cars", carsRouter)
 app.use("/users", usersRouter)
 
