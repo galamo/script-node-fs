@@ -3,7 +3,9 @@
 2. GET users/:email will return the user with the requested email
 3. GET  users/:gender will return all the users with the requested gender
 4. DELETE users/:email will remove the user from the users array by email 
-5. GET users/new/:email/:age/:balance/:company - adding new user to the array ( we will change it to POST)
+5. POST users/new/:email/:age/:balance/:company - adding new user to the array ( we will change it to POST)
+a. express json middleware
+b. req.body 
 
 
 ```js
