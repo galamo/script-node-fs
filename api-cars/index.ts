@@ -2,9 +2,10 @@
 import express, { Request, Response, NextFunction } from "express"
 import fs from "fs"
 import { carsRouter } from "./routes/cars";
+import { usersRouter } from "./routes/users"
 const app = express();
-
 app.use("/cars", carsRouter)
+app.use("/users", usersRouter)
 
 function validateInputText(req: Request, res: Response, next: NextFunction) {
     const { text } = req.query
@@ -48,5 +49,4 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
 
 app.listen(4000, () => {
     console.log("connected, to the port: 4000")
-
 })
